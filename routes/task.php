@@ -15,6 +15,6 @@ Route::put('/task/{id}', [TaskController::class, 'update'])
 Route::delete('/task/{id}', [TaskController::class, 'destroy'])
     ->middleware(['auth', 'verified'])
     ->name('task.destroy');
-Route::delete('/task/clear', [TaskController::class, 'clearDone'])
+Route::delete('/task', [TaskController::class, 'clearDone'])
     ->middleware(['auth', 'verified'])
     ->name('task.clear');

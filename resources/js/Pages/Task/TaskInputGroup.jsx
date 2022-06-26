@@ -28,7 +28,7 @@ export default function TaskInputGroup(props) {
     let clearDone = () => {
         tasks = tasks.filter((task) => task.is_done == false);
         axios
-            .delete("task/clear")
+            .delete("task")
             .then((res) => {
                 console.log(res.data.message);
                 setTasks(tasks);

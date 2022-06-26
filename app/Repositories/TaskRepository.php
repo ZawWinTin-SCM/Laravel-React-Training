@@ -39,6 +39,7 @@ class TaskRepository
                 'title' => $request->title,
                 'user_id' => auth()->id(),
             ]);
+            $task = $task->refresh();
 
             DB::commit();
 
