@@ -121,7 +121,6 @@ class TaskRepository
      */
     public function clearDone()
     {
-        info('hello');
         $tasks = Task::ownTask()->done();
         $tasks->delete();
 
